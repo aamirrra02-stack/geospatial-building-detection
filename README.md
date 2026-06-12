@@ -11,12 +11,10 @@ This repository contains a comparative study of three distinct deep learning arc
 3. **Leaderboard Submission**: Constructed a robust inference pipeline to generate valid submission strings for Kaggle.
 
 ## Performance Summary
-| Model Architecture | Pipeline Type | mAP @ 0.5 | mAP @ 0.5:0.95 | Recall |
-| :--- | :--- | :--- | :--- | :--- |
-| **YOLOv8** | One-Stage (Anchor-Free) | **0.6949** | **0.3507** | **0.5142** |
-| **YOLOv11** | One-Stage (Advanced) | 0.6524 | 0.2972 | 0.4565 |
-| **ResNet50 (Faster R-CNN)** | Two-Stage (Anchor-Based) | 0.2860 | 0.0890 | 0.3261 |
-.
+<img width="757" height="491" alt="Screenshot 2026-06-12 034416" src="https://github.com/user-attachments/assets/f16b3b13-206f-4aea-8d86-4d3e37d70f01" />
+<img width="1518" height="533" alt="image" src="https://github.com/user-attachments/assets/35918fe8-412a-433f-aa93-b46934db107a" />
+
+
 ## 🏗️ System Architecture & Pipeline Workflow
 
 The complete end-to-end engineering pipeline is structured into four distinct modules: Data Engineering, Architectural Backbone Modeling, Standardized Evaluation, and Leadership Submission Ingestion.
@@ -50,6 +48,9 @@ The complete end-to-end engineering pipeline is structured into four distinct mo
                                     +----------------------------+
 ```
 
+<img width="1515" height="318" alt="image" src="https://github.com/user-attachments/assets/f96fcd25-e4cf-4637-9657-6eef61139167" />
+
+
 # Discussion 
 1. Why the YOLO Family Outperformed Faster R-CNN
 The two-stage Faster R-CNN architecture scored significantly lower (0.2860 mAP) due to data starvation. Lacking native integration with advanced data augmentations like Mosaic, its deep ResNet50 backbone could not generalize effectively on the raw 55-image distribution. Conversely, the YOLO models multiplied their data variety through aggressive synthetic combinations during training.
@@ -67,6 +68,9 @@ Format Conversion: Automated parsing functions normalize raw bounding coordinate
 Submission Column Headers: image_id and prediction_string
 
 Prediction String Layout: [class_id, confidence, x_center_norm, y_center_norm, w_norm, h_norm]
+
+<img width="1149" height="690" alt="Screenshot 2026-06-12 085210" src="https://github.com/user-attachments/assets/ec13c2c4-8d54-4258-9e0e-154dc0c83c1c" />
+
 
 # Final Conclusion:
 While YOLOv11 represents the cutting edge of the YOLO lineage, YOLOv8 proved to be the most robust, resilient, and optimal architecture for data-constrained geospatial tasks. It is your best candidate for the Kaggle private leaderboard and stands as the definitive champion of your comparative study.
