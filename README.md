@@ -7,7 +7,7 @@ This repository contains a comparative study of three distinct deep learning arc
 
 ## Project Workflow
 1. **Data Annotation**: Leveraged CVAT.ai to manually annotate raw satellite images into normalized YOLO format coordinates.
-2. **Model Training**: Evaluated performance across 20 epochs using YOLOv8, YOLOv11, and Faster R-CNN (ResNet50).
+2. **Model Training**: Evaluated performance across 150 epochs using YOLOv8, YOLOv11, and 20 epochs Faster R-CNN (ResNet50).
 3. **Leaderboard Submission**: Constructed a robust inference pipeline to generate valid submission strings for Kaggle.
 
 ## Performance Summary
